@@ -1,0 +1,16 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Raw data (not committed — reproduce via pull scripts)
+data/raw/
+data/*.parquet
+*.csv.zip
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp

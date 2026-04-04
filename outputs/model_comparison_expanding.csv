@@ -1,0 +1,3 @@
+Specification,Features,AUROC,AUPRC,Brier
+Baseline (main effects),10,0.832,0.422,0.117
+Interaction,13,0.825,0.44,0.117

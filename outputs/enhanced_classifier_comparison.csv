@@ -1,0 +1,6 @@
+Classifier,Features,AUROC,AUPRC,Brier
+Logistic Regression,10,0.832,0.422,0.117
+Random Forest,10,0.805,0.375,0.111
+Gradient Boosting,10,0.838,0.467,0.113
+SVM (RBF),10,0.821,0.441,0.115
+MLP,10,0.712,0.214,0.153
