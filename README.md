@@ -43,7 +43,6 @@ python src/pull_coinbase_daily.py
 
 ### 3. Build cleaned panels
 ```
-python src/make_clean_panel.py
 python src/make_clean_panel_3venues.py
 python src/build_depeg_dataset.py
 ```
@@ -69,14 +68,11 @@ All outputs (CSV tables, PNG figures) are saved to `data/clean/` and `outputs/`.
 - `pull_kraken_daily.py` — retrieves Kraken daily data via API  
 
 ### Panel Construction
-- `make_clean_panel.py` — builds cleaned panel for BTC/ETH (two venues)  
 - `make_clean_panel_3venues.py` — builds cleaned panel across three venues  
 - `build_depeg_dataset.py` — constructs the stablecoin micro-depeg panel  
-- `build_depeg_dataset_02.py` — alternate dataset build  
 - `config.py` — shared configuration settings  
 
 ### Cross-Venue Fragmentation Analysis
-- `plot_spreads.py` — spread time-series plots (two-venue)  
 - `plot_spreads_3venues.py` — triangular spread and Z-score plots  
 - `anomaly_summary.py` — spread anomaly diagnostics  
 - `var_comparison.py` — variance decomposition and VaR comparison  
@@ -84,16 +80,14 @@ All outputs (CSV tables, PNG figures) are saved to `data/clean/` and `outputs/`.
 - `volatility_without_anomalies.py` — volatility excluding anomalies  
 
 ### Micro-Depeg Prediction
-- `train_depeg_models.py` — trains logistic micro-depeg models  
 - `bootstrap_logit_inference.py` — walk-forward bootstrapped inference  
 - `logistic_coefficients.py` — logistic coefficient summaries  
 - `threshold_robustness.py` — threshold sensitivity analysis  
 
 ### Classifier Benchmarking and Expanding-Window Evaluation
 - `expanding_window_analysis.py` — expanding-window walk-forward evaluation (all 5 classifiers)  
-- `expanding_window_supplementary.py` — supplementary expanding-window analyses  
+- `expanding_window_supplementary.py` — threshold robustness and baseline vs interaction specification  
 - `enhanced_ml_analysis.py` — ROC/PR curves, SHAP, DeLong tests  
-- `ml_classifier_comparison.py` — classifier comparison utilities  
 
 ### Cross-Stablecoin Comparison
 - `usdc_analysis.py` — USDC descriptive analysis  
@@ -101,7 +95,6 @@ All outputs (CSV tables, PNG figures) are saved to `data/clean/` and `outputs/`.
 - `usdc_expanding_window.py` — USDC expanding-window evaluation  
 
 ### Visualisation
-- `calibration_plot.py` — calibration diagnostics  
 - `calibration_plot_pub.py` — publication-quality calibration plot  
 - `plot_system_architecture.py` — pipeline architecture diagram (Figure 1)  
 
