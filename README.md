@@ -1,11 +1,11 @@
-# Cross-Venue Integration, Risk Measurement, and Stablecoin Peg Fragility  
+# Cross-Exchange Fragmentation and Stablecoin Fragility  
 Replication Code
 
 This repository contains the replication code for the empirical analysis in the paper:
 
-**"Cross-Venue Risk Invariance and Regime-Driven Stablecoin Fragility in Cryptocurrency Markets"**
+**"Does Cross-Exchange Fragmentation Distort Cryptocurrency Risk Measures? Evidence from Venue Comparison and Stablecoin Micro-Depeg Prediction"**
 
-by S. Aljaloud and W. Alghassab — IEEE Access.
+by S. Aljaloud and W. Alghassab — Heliyon.
 
 All data are retrieved from public exchange APIs. Running the scripts in order reproduces the cleaned datasets, output tables, and figures reported in the paper.
 
