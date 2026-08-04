@@ -98,6 +98,27 @@ All outputs (CSV tables, PNG figures) are saved to `data/clean/` and `outputs/`.
 - `calibration_plot_pub.py` — publication-quality calibration plot  
 - `plot_system_architecture.py` — pipeline architecture diagram (Figure 1)  
 
+
+### Interaction and Cross-Venue Risk Tables
+- `interaction_logit_bootstrap.py` — interaction-term coefficients with moving-block bootstrap (Table 9)
+- `vol_var_3venues.py` — cross-venue volatility and VaR comparison, three venues (Table 3)
+
+## Major-Revision Analyses (2026)
+
+The `revision2026/` folder contains the analyses added during the Heliyon
+major revision, packaged as a single self-contained notebook
+(`heliyon_v2_experiments.ipynb`, runnable locally or on Google Colab) with
+its result CSVs in `revision2026/outputs/`:
+
+- Corrected full-sample variance shares (Table 2 recomputation)
+- Stress-conditional fragmentation: variance shares and spread magnitudes under
+  high-volatility regimes, extreme return days, and anomaly days (Table 4)
+- Newey-West significance tests for mean cross-venue spreads (Table 1)
+- Rolling-window robustness, w in {14, 30, 60} (Table 12)
+- Extended micro-depeg threshold sweep, 5-20 bps (Table 11)
+- Moving-block bootstrap block-length robustness, L in {7, 14, 21}
+- Deviation-distribution context for the 10 bps threshold
+
 ##  Requirements
 
 Install with:

@@ -48,7 +48,9 @@ def plot_spreads_timeseries(df: pd.DataFrame, asset: str) -> None:
     ax.set_xlabel("Date")
     ax.set_ylabel("Relative Spread")
     ax.set_title(f"{asset}: Triangular Cross-Venue Relative Spreads")
-    ax.legend(loc="upper right", framealpha=0.9)
+    # Legend below the axes so it never occludes the data
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.22),
+              ncol=3, frameon=False, columnspacing=1.4)
     fig.autofmt_xdate(rotation=0, ha="center")
     fig.tight_layout()
     out = OUTPUTS / f"spread_rel_timeseries_{asset}.png"
@@ -67,7 +69,9 @@ def plot_zscore(df: pd.DataFrame, asset: str) -> None:
     ax.set_xlabel("Date")
     ax.set_ylabel("Rolling Z-Score")
     ax.set_title(f"{asset}: Rolling Z-Scores of Triangular Spreads (window = {ROLL_WINDOW} days)")
-    ax.legend(loc="upper right", framealpha=0.9)
+    # Legend below the axes so it never occludes the data
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.22),
+              ncol=4, frameon=False, columnspacing=1.2)
     fig.autofmt_xdate(rotation=0, ha="center")
     fig.tight_layout()
     out = OUTPUTS / f"spread_rel_zscore_{asset}.png"
