@@ -1,6 +1,8 @@
 # Cross-Exchange Fragmentation and Stablecoin Fragility  
 Replication Code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21792162.svg)](https://doi.org/10.5281/zenodo.21792162)
+
 This repository contains the replication code for the empirical analysis in the paper:
 
 **"Does Cross-Exchange Fragmentation Distort Cryptocurrency Risk Measures? Evidence from Venue Comparison and Stablecoin Micro-Depeg Prediction"**
@@ -8,6 +10,14 @@ This repository contains the replication code for the empirical analysis in the 
 by S. Aljaloud and W. Alghassab — Heliyon.
 
 All data are retrieved from public exchange APIs. Running the scripts in order reproduces the cleaned datasets, output tables, and figures reported in the paper.
+
+## Data and archive
+
+An archived, citable snapshot of this replication package (code and all processed datasets) is deposited on Zenodo:
+
+> DOI: [10.5281/zenodo.21792162](https://doi.org/10.5281/zenodo.21792162)
+
+Please cite the archive when using the data or code (see `CITATION.cff`).
 
 ##  Repository Structure
 ```
