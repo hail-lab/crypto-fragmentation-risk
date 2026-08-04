@@ -1,0 +1,35 @@
+{
+  "title": "Replication package: Does Cross-Exchange Fragmentation Distort Cryptocurrency Risk Measures? Evidence from Venue Comparison and Stablecoin Micro-Depeg Prediction",
+  "description": "<p>Replication code and processed datasets for the study of cross-venue fragmentation in centralized cryptocurrency markets and next-day stablecoin micro-depeg prediction. Includes the balanced three-venue daily panel for BTC and ETH (Binance, Kraken, Coinbase, Feb 2024 - Feb 2026), the matched USDT/USD and USDC/USD panels, all analysis scripts, and the Heliyon major-revision (2026) analyses (stress-conditional fragmentation, Newey-West spread significance, rolling-window and bootstrap block-length robustness, extended threshold sweep, and the corrected variance-share table).</p>",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "cryptocurrency markets",
+    "market fragmentation",
+    "stablecoin",
+    "Value-at-Risk",
+    "machine learning",
+    "rare-event classification",
+    "market microstructure"
+  ],
+  "creators": [
+    {
+      "name": "Aljaloud, Saud",
+      "affiliation": "University of Ha'il",
+      "orcid": "0000-0002-4700-1815"
+    },
+    {
+      "name": "Alghassab, Waleed",
+      "affiliation": "University of Ha'il",
+      "orcid": "0009-0007-7794-0163"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/hail-lab/crypto-fragmentation-risk",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

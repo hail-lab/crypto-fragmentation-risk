@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+title: "Replication package: Does Cross-Exchange Fragmentation Distort Cryptocurrency Risk Measures? Evidence from Venue Comparison and Stablecoin Micro-Depeg Prediction"
+type: dataset
+authors:
+  - family-names: Aljaloud
+    given-names: Saud
+    orcid: "https://orcid.org/0000-0002-4700-1815"
+    affiliation: "University of Ha'il"
+  - family-names: Alghassab
+    given-names: Waleed
+    orcid: "https://orcid.org/0009-0007-7794-0163"
+    affiliation: "University of Ha'il"
+license: MIT
+repository-code: "https://github.com/hail-lab/crypto-fragmentation-risk"
+keywords:
+  - cryptocurrency markets
+  - market fragmentation
+  - stablecoin
+  - Value-at-Risk
+  - machine learning
+  - rare-event classification
+  - market microstructure
