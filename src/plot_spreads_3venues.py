@@ -55,6 +55,7 @@ def plot_spreads_timeseries(df: pd.DataFrame, asset: str) -> None:
     fig.tight_layout()
     out = OUTPUTS / f"spread_rel_timeseries_{asset}.png"
     fig.savefig(out, bbox_inches="tight")
+    fig.savefig(out.with_suffix(".pdf"), bbox_inches="tight")
     plt.close(fig)
     print(f"Saved {out}")
 
@@ -76,6 +77,7 @@ def plot_zscore(df: pd.DataFrame, asset: str) -> None:
     fig.tight_layout()
     out = OUTPUTS / f"spread_rel_zscore_{asset}.png"
     fig.savefig(out, bbox_inches="tight")
+    fig.savefig(out.with_suffix(".pdf"), bbox_inches="tight")
     plt.close(fig)
     print(f"Saved {out}")
 

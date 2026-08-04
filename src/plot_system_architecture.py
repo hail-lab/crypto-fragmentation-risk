@@ -175,10 +175,14 @@ def main() -> None:
     # Save
     fig.savefig(str(OUTPUTS / "system_architecture.png"),
                 bbox_inches="tight", pad_inches=0.02, dpi=300)
+    fig.savefig(str(OUTPUTS / "system_architecture.pdf"),
+                bbox_inches="tight", pad_inches=0.02)
     print(f"Saved: {OUTPUTS / 'system_architecture.png'}")
     if PAPER_DIR and PAPER_DIR.exists():
         fig.savefig(str(PAPER_DIR / "system_architecture.png"),
                     bbox_inches="tight", pad_inches=0.02, dpi=300)
+        fig.savefig(str(PAPER_DIR / "system_architecture.pdf"),
+                    bbox_inches="tight", pad_inches=0.02)
         print(f"Saved: {PAPER_DIR / 'system_architecture.png'}")
 
     plt.close(fig)

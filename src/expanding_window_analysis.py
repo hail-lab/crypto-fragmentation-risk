@@ -233,8 +233,10 @@ def main():
     ax.set_ylim([-0.01, 1.01])
     fig.tight_layout()
     fig.savefig(OUT_DIR / "roc_curves_comparison.png", dpi=300, bbox_inches="tight")
+    fig.savefig(OUT_DIR / "roc_curves_comparison.pdf", bbox_inches="tight")
     if SUBMISSION_DIR and SUBMISSION_DIR.exists():
         fig.savefig(SUBMISSION_DIR / "roc_curves_comparison.png", dpi=300, bbox_inches="tight")
+        fig.savefig(SUBMISSION_DIR / "roc_curves_comparison.pdf", bbox_inches="tight")
     plt.close(fig)
     print("Saved ROC curve figure.")
 
@@ -257,8 +259,10 @@ def main():
     ax.set_ylim([0, 1.01])
     fig.tight_layout()
     fig.savefig(OUT_DIR / "pr_curves_comparison.png", dpi=300, bbox_inches="tight")
+    fig.savefig(OUT_DIR / "pr_curves_comparison.pdf", bbox_inches="tight")
     if SUBMISSION_DIR and SUBMISSION_DIR.exists():
         fig.savefig(SUBMISSION_DIR / "pr_curves_comparison.png", dpi=300, bbox_inches="tight")
+        fig.savefig(SUBMISSION_DIR / "pr_curves_comparison.pdf", bbox_inches="tight")
     plt.close(fig)
     print("Saved PR curve figure.")
 
@@ -291,8 +295,10 @@ def main():
         plt.title("SHAP Feature Importance — Gradient Boosting", fontsize=11)
         plt.tight_layout()
         plt.savefig(OUT_DIR / "shap_gbm_beeswarm.png", dpi=300, bbox_inches="tight")
+        plt.savefig(OUT_DIR / "shap_gbm_beeswarm.pdf", bbox_inches="tight")
         if SUBMISSION_DIR and SUBMISSION_DIR.exists():
             plt.savefig(SUBMISSION_DIR / "shap_gbm_beeswarm.png", dpi=300, bbox_inches="tight")
+            plt.savefig(SUBMISSION_DIR / "shap_gbm_beeswarm.pdf", bbox_inches="tight")
         plt.close("all")
         print("Saved SHAP beeswarm figure.")
     except Exception as e:

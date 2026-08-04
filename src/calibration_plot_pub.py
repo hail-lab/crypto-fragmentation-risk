@@ -79,6 +79,7 @@ def main() -> None:
     fig.tight_layout()
     out = OUTPUTS / "calibration_logistic.png"
     fig.savefig(out, bbox_inches="tight")
+    fig.savefig(out.with_suffix(".pdf"), bbox_inches="tight")
     plt.close(fig)
     print(f"Saved {out}")
 
