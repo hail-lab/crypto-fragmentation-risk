@@ -1,6 +1,6 @@
 {
   "title": "Replication package: Does Cross-Exchange Fragmentation Distort Cryptocurrency Risk Measures? Evidence from Venue Comparison and Stablecoin Micro-Depeg Prediction",
-  "description": "<p>Replication code and processed datasets for the study of cross-venue fragmentation in centralized cryptocurrency markets and next-day stablecoin micro-depeg prediction. Includes the balanced three-venue daily panel for BTC and ETH (Binance, Kraken, Coinbase, Feb 2024 - Feb 2026), the matched USDT/USD and USDC/USD panels, all analysis scripts, and the Heliyon major-revision (2026) analyses (stress-conditional fragmentation, Newey-West spread significance, rolling-window and bootstrap block-length robustness, extended threshold sweep, and the corrected variance-share table).</p>",
+  "description": "<p>Replication code and processed datasets for the study of cross-venue fragmentation in centralized cryptocurrency markets and next-day stablecoin micro-depeg prediction. Includes the balanced daily BTC and ETH panel for Binance and Kraken (Feb 2024 - Feb 2026), the matched USDT/USD and USDC/USD panels, all analysis scripts, the Heliyon major-revision (2026) analyses, and the Heliyon round-2 (2026) analyses (variance decomposition with the covariance term, conditional slope of the interaction specification, and block-bootstrap intervals for out-of-sample performance).</p><p>Coinbase market data are not redistributed, in accordance with the Coinbase Market Data Terms of Use. The script src/restore_coinbase_columns.py retrieves the Coinbase daily closes from Coinbase's public API and rebuilds the three-venue files used in the paper exactly.</p>",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "MIT",
@@ -31,5 +31,6 @@
       "relation": "isSupplementTo",
       "scheme": "url"
     }
-  ]
+  ],
+  "version": "v3.0"
 }
