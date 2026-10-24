@@ -7,6 +7,14 @@ data/raw/
 data/*.parquet
 *.csv.zip
 
+# Coinbase market data may not be redistributed (Coinbase Market Data Terms).
+# These full three-venue files are rebuilt locally by
+# src/restore_coinbase_columns.py and must never be committed.
+data/clean/panel_overlap_btc_eth_3venues.csv
+data/clean/spreads_overlap_btc_eth_3venues.csv
+data_raw/
+data_clean/
+
 # Logs
 *.log
 

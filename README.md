@@ -13,11 +13,26 @@ All data are retrieved from public exchange APIs. Running the scripts in order r
 
 ## Data and archive
 
-An archived, citable snapshot of this replication package (code and all processed datasets) is deposited on Zenodo:
+An archived, citable snapshot of this replication package (code and processed datasets) is deposited on Zenodo:
 
 > DOI: [10.5281/zenodo.21792917](https://doi.org/10.5281/zenodo.21792917)
 
 Please cite the archive when using the data or code (see `CITATION.cff`).
+
+### Coinbase data are not redistributed
+
+Coinbase market data are licensed for personal or research use and may not be redistributed to third parties without Coinbase's written consent (Coinbase Market Data Terms of Use; Coinbase Developer Platform Terms). This package therefore ships the three-venue BTC/ETH files **without** the Coinbase columns:
+
+- `data/clean/panel_overlap_btc_eth_3venues.public.csv` (Binance and Kraken closes)
+- `data/clean/spreads_overlap_btc_eth_3venues.public.csv` (Binance–Kraken spread)
+
+To obtain the Coinbase closes from Coinbase's public API, under Coinbase's terms, and rebuild the full files that the analysis scripts read, run:
+
+```
+python -m src.restore_coinbase_columns
+```
+
+This writes `data/clean/panel_overlap_btc_eth_3venues.csv` and `data/clean/spreads_overlap_btc_eth_3venues.csv`; both are git-ignored. The rebuilt files reproduce the closes used in the paper exactly (checked on 24 Oct 2026: 1,442 of 1,442 Coinbase closes identical). Binance, Kraken, USDT/USD and USDC/USD data are included as before.
 
 ##  Repository Structure
 ```
@@ -56,6 +71,14 @@ python src/pull_coinbase_daily.py
 python src/make_clean_panel_3venues.py
 python src/build_depeg_dataset.py
 ```
+To reproduce the paper from the shipped processed data instead of steps 2–3, run `python -m src.restore_coinbase_columns` (see above).
+
+### Revision analyses (Heliyon, round 2)
+```
+python -m src.round2_analyses        # variance decomposition with covariance term, conditional slope, out-of-sample intervals
+python -m src.round2_threshold_ci    # intervals for the threshold sweep and USDC
+```
+Outputs are written to `outputs/round2/`.
 
 ### 4. Run analyses
 ```

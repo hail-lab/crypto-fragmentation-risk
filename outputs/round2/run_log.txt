@@ -1,0 +1,61 @@
+asset   n  var_delta_mean  var_delta_max  two_cov_mean  two_cov_min  two_cov_max  net_abs_mean  net_abs_max  corr_min  max_identity_resid
+  BTC 720          0.0339         0.0457       -0.0374      -1.2022       1.1408        0.7809       1.1782    0.9998                 0.0
+  ETH 720          0.0278         0.0368       -0.0286      -0.5501       0.5049        0.3516       0.5289    0.9998                 0.0
+asset               condition   n  var_delta_mean  var_delta_max  two_cov_mean  two_cov_min  two_cov_max  net_abs_mean  net_abs_max
+  BTC             Full sample 691          0.0352         0.0477       -0.8108      -1.1889      -0.4273        0.7756       1.1649
+  BTC Top-quartile volatility 173          0.0248         0.0295       -0.7536      -1.1124      -0.4605        0.7288       1.0946
+  BTC   Top-decile volatility  70          0.0247         0.0334       -0.3896      -0.5634      -0.1331        0.3648       0.5475
+  BTC    Worst-decile returns  70          0.0790         0.1103        0.8846      -0.0105       1.3631        0.9636       1.4451
+  BTC            Anomaly days  13          0.0430         0.0484       -0.2312      -1.5664       1.1837        1.0058       1.5181
+  ETH             Full sample 691          0.0271         0.0358       -0.3689      -0.5971       0.0242        0.3819       0.5730
+  ETH Top-quartile volatility 173          0.0389         0.0633       -0.3023      -0.5203       0.0436        0.3347       0.5023
+  ETH   Top-decile volatility  70          0.0762         0.1319       -0.4717      -0.8781       0.1319        0.5713       0.8581
+  ETH    Worst-decile returns  70          0.0434         0.0558        0.3954       0.2801       0.6253        0.4388       0.6577
+  ETH            Anomaly days  11          0.8197         1.4581       -2.5786      -9.4828       5.0574        5.2113       8.0247
+sigma30_quantile  sigma30  slope_logodds_per_sd  odds_ratio_per_sd  ci95_lo  ci95_hi  p_boot  B_eff  b_ret_lag1_std  b_interaction_std  sd_ret_lag1  sd_sigma30  mean_sigma30
+             P10   0.0002               -0.4460             0.6402  -0.8982   0.0770   0.124    500          -0.729               0.72       0.0004      0.0001        0.0004
+             P25   0.0003               -0.3308             0.7184  -0.8032   0.2416   0.276    500          -0.729               0.72       0.0004      0.0001        0.0004
+             P50   0.0004               -0.1735             0.8407  -0.7738   0.4649   0.596    500          -0.729               0.72       0.0004      0.0001        0.0004
+             P75   0.0005               -0.0113             0.9887  -0.7441   0.7411   0.948    500          -0.729               0.72       0.0004      0.0001        0.0004
+             P90   0.0006                0.1456             1.1567  -0.7192   1.0184   0.680    500          -0.729               0.72       0.0004      0.0001        0.0004
+N=689, T0=482, test=207, test events=28, skipped draws=0
+         classifier metric  point  ci95_lo  ci95_hi  B_eff
+Logistic Regression  AUROC  0.832    0.629    0.918   2000
+Logistic Regression  AUPRC  0.422    0.148    0.681   2000
+Logistic Regression  Brier  0.117    0.035    0.229   2000
+      Random Forest  AUROC  0.805    0.633    0.906   2000
+      Random Forest  AUPRC  0.375    0.169    0.619   2000
+      Random Forest  Brier  0.111    0.034    0.215   2000
+  Gradient Boosting  AUROC  0.838    0.677    0.925   2000
+  Gradient Boosting  AUPRC  0.467    0.234    0.706   2000
+  Gradient Boosting  Brier  0.113    0.035    0.218   2000
+          SVM (RBF)  AUROC  0.821    0.586    0.921   2000
+          SVM (RBF)  AUPRC  0.441    0.082    0.739   2000
+          SVM (RBF)  Brier  0.115    0.036    0.220   2000
+                MLP  AUROC  0.712    0.549    0.824   2000
+                MLP  AUPRC  0.214    0.071    0.414   2000
+                MLP  Brier  0.153    0.123    0.195   2000
+                             comparison metric  diff_point  ci95_lo  ci95_hi  ci90_lo  ci90_hi  p_boot  delong_z  delong_p  B_eff
+    Random Forest - Logistic Regression  AUROC      -0.027   -0.076    0.043   -0.068    0.028   0.318     1.080     0.280   2000
+    Random Forest - Logistic Regression  AUPRC      -0.047   -0.146    0.034   -0.127    0.017   0.180       NaN       NaN   2000
+    Random Forest - Logistic Regression  Brier      -0.006   -0.015    0.000   -0.013   -0.001   0.051       NaN       NaN   2000
+Gradient Boosting - Logistic Regression  AUROC       0.005   -0.043    0.083   -0.036    0.062   0.971    -0.204     0.839   2000
+Gradient Boosting - Logistic Regression  AUPRC       0.046   -0.057    0.118   -0.043    0.099   0.497       NaN       NaN   2000
+Gradient Boosting - Logistic Regression  Brier      -0.005   -0.016    0.005   -0.014    0.004   0.380       NaN       NaN   2000
+        SVM (RBF) - Logistic Regression  AUROC      -0.011   -0.109    0.063   -0.084    0.047   0.754     0.283     0.777   2000
+        SVM (RBF) - Logistic Regression  AUPRC       0.019   -0.165    0.123   -0.141    0.105   0.948       NaN       NaN   2000
+        SVM (RBF) - Logistic Regression  Brier      -0.003   -0.009    0.002   -0.008    0.001   0.278       NaN       NaN   2000
+              MLP - Logistic Regression  AUROC      -0.120   -0.294    0.091   -0.268    0.040   0.159     2.036     0.042   2000
+              MLP - Logistic Regression  AUPRC      -0.208   -0.452   -0.024   -0.422   -0.060   0.024       NaN       NaN   2000
+              MLP - Logistic Regression  Brier       0.035   -0.040    0.096   -0.026    0.088   0.329       NaN       NaN   2000
+ classifier metric  point  ci95_lo  ci95_hi  B_eff
+   Baseline  AUROC  0.832    0.629    0.918   2000
+   Baseline  AUPRC  0.422    0.148    0.681   2000
+   Baseline  Brier  0.117    0.035    0.229   2000
+Interaction  AUROC  0.825    0.618    0.904   2000
+Interaction  AUPRC  0.440    0.257    0.664   2000
+Interaction  Brier  0.117    0.035    0.229   2000
+            comparison metric  diff_point  ci95_lo  ci95_hi  ci90_lo  ci90_hi  p_boot  delong_z  delong_p  B_eff
+Interaction - Baseline  AUROC      -0.007   -0.056    0.026   -0.044    0.019   0.612     0.596     0.551   2000
+Interaction - Baseline  AUPRC       0.018   -0.063    0.119   -0.054    0.086   0.855       NaN       NaN   2000
+Interaction - Baseline  Brier      -0.000   -0.001    0.000   -0.001    0.000   0.642       NaN       NaN   2000
