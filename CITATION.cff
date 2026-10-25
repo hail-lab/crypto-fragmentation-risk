@@ -12,10 +12,10 @@ authors:
     orcid: "https://orcid.org/0009-0007-7794-0163"
     affiliation: "University of Ha'il"
 license: MIT
-doi: "10.5281/zenodo.23639857"
+doi: "10.5281/zenodo.23640043"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23639857"
+    value: "10.5281/zenodo.23640043"
     description: "Zenodo archive of the replication package"
 repository-code: "https://github.com/hail-lab/crypto-fragmentation-risk"
 keywords:
