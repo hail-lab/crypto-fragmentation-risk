@@ -1,7 +1,7 @@
 # Cross-Exchange Fragmentation and Stablecoin Fragility  
 Replication Code
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23640043.svg)](https://doi.org/10.5281/zenodo.23640043)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24323573.svg)](https://doi.org/10.5281/zenodo.24323573)
 
 This repository contains the replication code for the empirical analysis in the paper:
 
@@ -15,7 +15,7 @@ All data are retrieved from public exchange APIs. Running the scripts in order r
 
 An archived, citable snapshot of this replication package (code and processed datasets) is deposited on Zenodo:
 
-> DOI: [10.5281/zenodo.23640043](https://doi.org/10.5281/zenodo.23640043)
+> DOI: [10.5281/zenodo.24323573](https://doi.org/10.5281/zenodo.24323573)
 
 Please cite the archive when using the data or code (see `CITATION.cff`).
 
