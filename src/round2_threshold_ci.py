@@ -1,9 +1,9 @@
 """
 Second-round revision: block-bootstrap intervals for the remaining
-out-of-sample results (HELIYON-D-26-02293R1, Comment 3, "where feasible").
+out-of-sample results, where feasible.
 
   - threshold sweep (manuscript Table 12): expanding-window logistic at
-    5, 10, 15, 20 bps, as in revision2026/heliyon_v2_experiments.ipynb, D1;
+    5, 10, 15, 20 bps, as in revision2026/robustness_experiments.ipynb, D1;
   - USDC at 2 bps (manuscript Table 11), as in src/usdc_expanding_window.py.
 
 Intervals: moving-block bootstrap of the out-of-sample forecast/outcome pairs

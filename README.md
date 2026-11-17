@@ -7,7 +7,7 @@ This repository contains the replication code for the empirical analysis in the 
 
 **"Does Cross-Exchange Fragmentation Distort Cryptocurrency Risk Measures? Evidence from Venue Comparison and Stablecoin Micro-Depeg Prediction"**
 
-by S. Aljaloud and W. Alghassab — Heliyon.
+by S. Aljaloud and W. Alghassab (manuscript submitted for publication).
 
 All data are retrieved from public exchange APIs. Running the scripts in order reproduces the cleaned datasets, output tables, and figures reported in the paper.
 
@@ -73,12 +73,30 @@ python src/build_depeg_dataset.py
 ```
 To reproduce the paper from the shipped processed data instead of steps 2–3, run `python -m src.restore_coinbase_columns` (see above).
 
-### Revision analyses (Heliyon, round 2)
+### Additional analyses: covariance-aware decomposition and interval estimates
 ```
 python -m src.round2_analyses        # variance decomposition with covariance term, conditional slope, out-of-sample intervals
 python -m src.round2_threshold_ci    # intervals for the threshold sweep and USDC
 ```
 Outputs are written to `outputs/round2/`.
+
+### Persistence benchmark, USD conversion and full prediction model (release v3.1)
+```
+python -m src.robustness_analyses          # USD conversion of USDT-quoted Binance prices; dispersion index
+python -m src.robustness_persistence       # persistence benchmark |d_t|; USDT-free dispersion measures
+python -m src.robustness_onset             # evaluation on days with the peg intact (new onsets)
+python -m src.full_model_analyses          # full model (|d_t| + 10 regime predictors): 5 classifiers,
+                                           #   coefficients, thresholds, specification checks, figures
+python -m src.full_model_interaction_usdc  # interaction specification and USDC with the full model
+python -m src.full_model_dispersion        # cross-venue dispersion added to the full model
+```
+Outputs are written to `outputs/robustness/` and `outputs/full_model/`. Each script first
+reproduces the corresponding published baseline numbers. These scripts read the full
+three-venue files, so run `python -m src.restore_coinbase_columns` first.
+
+### Changelog
+- v3.1: persistence benchmark and full prediction model; USD conversion of USDT-quoted prices;
+  cross-venue dispersion as a predictor; updated architecture figure. Data unchanged.
 
 ### 4. Run analyses
 ```
@@ -136,11 +154,11 @@ All outputs (CSV tables, PNG figures) are saved to `data/clean/` and `outputs/`.
 - `interaction_logit_bootstrap.py` — interaction-term coefficients with moving-block bootstrap (Table 9)
 - `vol_var_3venues.py` — cross-venue volatility and VaR comparison, three venues (Table 3)
 
-## Major-Revision Analyses (2026)
+## Robustness Analyses (2026)
 
-The `revision2026/` folder contains the analyses added during the Heliyon
-major revision, packaged as a single self-contained notebook
-(`heliyon_v2_experiments.ipynb`, runnable locally or on Google Colab) with
+The `revision2026/` folder contains robustness analyses added in 2026,
+packaged as a single self-contained notebook
+(`robustness_experiments.ipynb`, runnable locally or on Google Colab) with
 its result CSVs in `revision2026/outputs/`:
 
 - Corrected full-sample variance shares (Table 2 recomputation)

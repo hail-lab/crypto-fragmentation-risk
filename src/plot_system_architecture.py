@@ -95,6 +95,7 @@ def main() -> None:
           "\u2022 Triangular pairwise spreads\n"
           "\u2022 Rolling Z-score anomalies\n"
           "\u2022 Variance decomposition\n"
+          "\u2022 USD conversion of USDT quotes\n"
           "\u2022 EWMA & sample volatility\n"
           "\u2022 Historical VaR (1%, 5%)", fs=7)
 
@@ -103,12 +104,14 @@ def main() -> None:
     title(ax, x2 + 0.01, 0.53, "MODULE B", C_PRED, fs=8)
     label(ax, x2 + 0.01, 0.495, "Micro-Depeg Classification", fs=7.5, fontweight="bold", color=C_PRED)
     label(ax, x2 + 0.012, 0.45,
-          "\u2022 Feature engineering\n"
-          "  (\u03c3\u2077, \u03c3\u00b9\u2074, \u03c3\u00b3\u2070, lags, volume)\n"
+          "\u2022 Features: current deviation |d\u209c|,\n"
+          "  \u03c3\u2077, \u03c3\u00b9\u2074, \u03c3\u00b3\u2070, returns, volume\n"
           "\u2022 Expanding-window protocol\n"
+          "\u2022 Persistence benchmark\n"
           "\u2022 5-classifier benchmark\n"
-          "  (LR, RF, GBM, SVM, MLP)\n"
-          "\u2022 DeLong AUROC tests\n"
+          "  (LR, RF, GB, SVM, MLP)\n"
+          "\u2022 DeLong tests, block bootstrap\n"
+          "\u2022 Spreads as depeg predictors\n"
           "\u2022 SHAP feature attribution\n"
           "\u2022 USDC cross-stablecoin test", fs=7)
 
@@ -124,8 +127,9 @@ def main() -> None:
     rounded_box(ax, (x3, 0.68), ew, 0.22, C_FRAG, alpha=0.06)
     title(ax, x3 + 0.01, 0.89, "DIAGNOSTICS", C_FRAG, fs=8)
     label(ax, x3 + 0.012, 0.845,
-          "Venue variance share\n"
-          "< 1% of total variance\n\n"
+          "Net venue component:\n"
+          "≤ 1.2% of variance (quoted)\n"
+          "< 0.5% in U.S. dollar terms\n\n"
           "VaR invariant to\n"
           "venue choice", fs=7)
 
@@ -135,7 +139,7 @@ def main() -> None:
     label(ax, x3 + 0.012, 0.525,
           "AUROC, AUPRC, Brier\n"
           "Calibration diagnostics\n"
-          "Bootstrap CIs\n"
+          "Block-bootstrap CIs\n"
           "DeLong comparisons\n"
           "SHAP attribution\n\n"
           "Coefficient & SHAP\n"

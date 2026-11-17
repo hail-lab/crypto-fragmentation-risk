@@ -1,5 +1,5 @@
 """
-Second-round revision analyses (HELIYON-D-26-02293R1).
+Second-round analyses (2026).
 
 1. Variance decomposition with the covariance term (Eq. 6): for every
    ordered venue pair (i, j),
@@ -127,7 +127,7 @@ def variance_decomposition(panel: pd.DataFrame, spreads: pd.DataFrame):
             "max_identity_resid": rr.identity_resid.abs().max(),
         })
 
-        # Table 4: stress conditions (same construction as heliyon_v2 notebook, Section A)
+        # Table 4: stress conditions (same construction as revision2026/robustness_experiments.ipynb, Section A)
         g["ret_avg"] = g[[f"ret_{v}" for v in VENUES]].mean(axis=1)
         g["rv30"] = g["ret_avg"].rolling(30).std()
         s = spreads.loc[spreads.asset == asset,
